@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13507"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="MAPWatch" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="0.12" alignment="left" id="Yhb-D8-3Jw">
+                            <items>
+                                <label width="0.5" height="1" alignment="left" text="SBP" textAlignment="center" id="pF0-7i-flY"/>
+                                <label width="0.5" height="1" alignment="left" text="DBP" textAlignment="center" id="sjQ-Zu-p9p"/>
+                            </items>
+                        </group>
+                        <group width="1" height="0.64000000000000001" alignment="left" id="bWe-3e-SPu">
+                            <items>
+                                <picker width="0.5" height="1" alignment="left" focusStyle="stack" id="Zh6-eA-RBu">
+                                    <connections>
+                                        <action selector="SBPpickerChanged:" destination="AgC-eL-Hgc" id="xm1-ge-xdd"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.5" height="1" alignment="left" focusStyle="stack" id="WJd-xX-udD">
+                                    <connections>
+                                        <action selector="DBPpickerChanged:" destination="AgC-eL-Hgc" id="l9U-8J-FX7"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <label width="1" height="0.12" alignment="left" text="PP: 45mmHg" textAlignment="center" id="RYu-ab-ant">
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <label width="1" height="0.12" alignment="left" text="MAP: 100mmHg" textAlignment="center" id="NB6-7c-Alh">
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="DBPPicker" destination="WJd-xX-udD" id="pVw-g8-9Ws"/>
+                        <outlet property="MAPLabel" destination="NB6-7c-Alh" id="mff-la-wcT"/>
+                        <outlet property="PPLabel" destination="RYu-ab-ant" id="taB-Iv-csX"/>
+                        <outlet property="SBPPicker" destination="Zh6-eA-RBu" id="s73-De-qoy"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
