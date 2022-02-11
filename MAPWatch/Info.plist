@@ -29,5 +29,7 @@
 	<string>matsuikeiji.MAP</string>
 	<key>WKWatchKitApp</key>
 	<true/>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>
